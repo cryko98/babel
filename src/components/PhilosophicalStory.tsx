@@ -50,13 +50,13 @@ export default function PhilosophicalStory() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           
           {/* Left sticky quote card that sets the mood */}
-          <div className="lg:col-span-4 lg:sticky lg:top-28 bg-[#0a0a0a] border border-babel-border p-8 rounded-sm shadow-xl">
-            <span className="text-babel-gold font-mono text-[10px] uppercase tracking-widest block mb-4 font-bold">THE DOCTRINE</span>
-            <p className="font-serif text-2xl lg:text-3xl font-semibold text-white leading-tight tracking-tight italic">
+          <div className="lg:col-span-4 lg:sticky lg:top-28 bg-babel-bronze/80 backdrop-blur-md border border-babel-border p-8 rounded-sm shadow-2xl">
+            <span className="text-babel-gold font-mono text-[10px] uppercase tracking-widest block mb-4 font-bold">THE COGNITIVE DOCTRINE</span>
+            <p className="font-serif text-2xl lg:text-3xl font-semibold text-babel-parchment leading-tight tracking-tight italic">
               "The machine is only a mirror. What you see in it depends on whether you are still awake."
             </p>
-            <div className="h-[1px] w-12 bg-babel-gold/30 my-6"></div>
-            <p className="text-[#a1a1aa] text-xs font-mono uppercase tracking-wider leading-relaxed">
+            <div className="h-[1px] w-12 bg-babel-orange/40 my-6"></div>
+            <p className="text-babel-sandstone text-xs font-mono uppercase tracking-wider leading-relaxed">
               $babel represents the critical threshold where humanity decides to remember its source or disintegrate into automated patterns.
             </p>
           </div>
@@ -66,50 +66,50 @@ export default function PhilosophicalStory() {
             {paragraphs.map((p, idx) => (
               <div 
                 key={idx} 
-                className="p-8 md:p-10 rounded-sm bg-[#080808]/70 hover:bg-[#080808] border border-babel-border hover:border-babel-gold/40 transition-all duration-300 relative group"
+                className="p-8 md:p-10 rounded-sm bg-babel-bronze/30 hover:bg-babel-bronze/60 border border-babel-border hover:border-babel-gold/40 transition-all duration-300 relative group"
               >
                 {/* Ancient indexing */}
-                <div className="absolute top-8 right-8 font-mono text-xs text-babel-gold/40 group-hover:text-babel-gold transition-colors duration-200">
-                  REF. {idx + 1}
+                <div className="absolute top-8 right-8 font-mono text-xs text-babel-orange/60 group-hover:text-babel-gold transition-colors duration-200 uppercase font-black tracking-widest">
+                  SYS.REF // {idx + 1}
                 </div>
 
-                <h3 className="font-display text-xl md:text-2xl font-bold text-babel-gold tracking-tight mb-4 flex items-center gap-3">
-                  {idx === 0 && <Orbit className="w-5 h-5 text-babel-gold" />}
-                  {idx === 1 && <Hourglass className="w-5 h-5 text-babel-gold" />}
-                  {idx === 2 && <Radio className="w-5 h-5 text-babel-gold" />}
-                  {idx === 3 && <BookOpen className="w-5 h-5 text-babel-gold" />}
-                  {idx === 4 && <Sparkles className="w-5 h-5 text-babel-gold" />}
+                <h3 className="font-display text-xl md:text-2xl font-bold text-babel-parchment tracking-tight mb-4 flex items-center gap-3 group-hover:text-babel-gold transition-colors">
+                  {idx === 0 && <Orbit className="w-5 h-5 text-babel-orange" />}
+                  {idx === 1 && <Hourglass className="w-5 h-5 text-babel-orange" />}
+                  {idx === 2 && <Radio className="w-5 h-5 text-babel-orange" />}
+                  {idx === 3 && <BookOpen className="w-5 h-5 text-babel-orange" />}
+                  {idx === 4 && <Sparkles className="w-5 h-5 text-babel-orange" />}
                   {p.title}
                 </h3>
                 
-                <div className="h-[1px] w-full bg-[#1c1c1e] mb-5"></div>
+                <div className="h-[1px] w-full bg-babel-border mb-5"></div>
 
-                <p className="text-[#d4d4d8] font-serif text-lg leading-relaxed whitespace-pre-line font-light">
+                <p className="text-babel-parchment font-serif text-lg leading-relaxed whitespace-pre-line font-light">
                   {p.content}
                 </p>
               </div>
             ))}
 
             {/* Final big confrontation prompt */}
-            <div className="p-8 md:p-12 rounded-sm bg-gradient-to-br from-[#0a0a0a] to-[#050505] border border-babel-gold/30 shadow-2xl relative overflow-hidden">
+            <div className="p-8 md:p-12 rounded-sm bg-gradient-to-br from-babel-bronze via-[#16100a] to-[#0a0705] border border-babel-orange/40 shadow-2xl relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-babel-gold/5 rounded-full filter blur-2xl"></div>
               
               <h3 className="font-display text-2xl md:text-3xl font-extrabold text-white mb-6 tracking-tight">
-                THE FINAL DECISION
+                THE FINAL CONFRONTATION
               </h3>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left">
-                <div className="p-4 bg-[#050505]/80 border border-[#222] rounded-sm">
+                <div className="p-4 bg-babel-dark/95 border border-babel-border rounded-sm">
                   <span className="text-babel-gold font-mono text-[9px] font-bold block mb-1 uppercase">AXIS 1</span>
-                  <span className="text-white font-serif text-base font-semibold block">Presence vs Automation</span>
+                  <span className="text-[#eadeca] font-serif text-base font-semibold block">Presence vs Automation</span>
                 </div>
-                <div className="p-4 bg-[#050505]/80 border border-[#222] rounded-sm">
+                <div className="p-4 bg-babel-dark/95 border border-babel-border rounded-sm">
                   <span className="text-babel-gold font-mono text-[9px] font-bold block mb-1 uppercase">AXIS 2</span>
-                  <span className="text-white font-serif text-base font-semibold block">Remembering vs Forgetting</span>
+                  <span className="text-[#eadeca] font-serif text-base font-semibold block">Remembering vs Forgetting</span>
                 </div>
-                <div className="p-4 bg-[#050505]/80 border border-[#222] rounded-sm">
+                <div className="p-4 bg-babel-dark/95 border border-babel-border rounded-sm">
                   <span className="text-babel-gold font-mono text-[9px] font-bold block mb-1 uppercase">AXIS 3</span>
-                  <span className="text-white font-serif text-base font-semibold block">Awakening vs Drifting</span>
+                  <span className="text-[#eadeca] font-serif text-base font-semibold block">Awakening vs Drifting</span>
                 </div>
               </div>
             </div>

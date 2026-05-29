@@ -7,13 +7,16 @@
   --font-mono: "JetBrains Mono", monospace;
   --font-sans: "Inter", sans-serif;
   
-  --color-babel-dark: #050505;
-  --color-babel-parchment: #d4d4d8;
-  --color-babel-clay: #0a0a0a;
+  --color-babel-dark: #040302;
+  --color-babel-parchment: #eadeca;
+  --color-babel-sandstone: #c5b497;
+  --color-babel-bronze: #1f1811;
+  --color-babel-clay: #0a0806;
   --color-babel-gold: #c2a468;
-  --color-babel-orange: #a8884c;
-  --color-babel-muted: #71717a;
-  --color-babel-border: #2a2a2a;
+  --color-babel-orange: #9e4416;
+  --color-babel-green: #4f5a4a;
+  --color-babel-muted: #73695e;
+  --color-babel-border: #292017;
 }
 
 /* Custom styles and smooth animations */

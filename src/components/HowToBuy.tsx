@@ -54,10 +54,10 @@ export default function HowToBuy({ contractAddress }: HowToBuyProps) {
   ];
 
   return (
-    <section id="how-to-buy" className="py-24 px-4 bg-[#0a0a0a] border-t border-b border-babel-border relative overflow-hidden">
-      {/* Mystical dust effects */}
-      <div className="absolute top-0 left-0 w-80 h-80 bg-babel-gold/5 rounded-full filter blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-babel-gold/3 rounded-full filter blur-3xl translate-x-1/3 translate-y-1/3"></div>
+    <section id="how-to-buy" className="py-24 px-4 bg-babel-dark border-t border-b border-babel-border relative overflow-hidden">
+      {/* Mystical dust and nature decay effects */}
+      <div className="absolute top-0 left-0 w-80 h-80 bg-babel-orange/5 rounded-full filter blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-babel-green/5 rounded-full filter blur-3xl translate-x-1/3 translate-y-1/3"></div>
 
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Header content */}
@@ -69,19 +69,19 @@ export default function HowToBuy({ contractAddress }: HowToBuyProps) {
           <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-4 tracking-tighter">
             THE PATH OF ACQUISITION
           </h2>
-          <div className="w-24 h-0.5 bg-babel-gold/30 mx-auto mb-6"></div>
-          <p className="text-[#a1a1aa] text-lg font-serif">
+          <div className="w-24 h-0.5 bg-babel-orange/30 mx-auto mb-6"></div>
+          <p className="text-babel-sandstone text-lg font-serif">
             Follow these sequential coordinates to exchange your capital for the coin of the new monument on pump.fun.
           </p>
         </div>
 
-        {/* Contract Address Callout Card */}
-        <div className="bg-[#080808] border border-babel-border rounded-sm p-6 md:p-8 mb-16 max-w-3xl mx-auto shadow-2xl flex flex-col md:flex-row md:items-center justify-between gap-6">
+        {/* Contract Address Callout Card - Glassmorphism */}
+        <div className="bg-babel-bronze/85 backdrop-blur-md border border-babel-border rounded-sm p-6 md:p-8 mb-16 max-w-3xl mx-auto shadow-2xl flex flex-col md:flex-row md:items-center justify-between gap-6">
           <div className="flex-1">
             <span className="text-babel-gold font-mono text-xs uppercase tracking-widest block mb-1 font-bold">
               SACRED REPLICANT ADDRESS (CA)
             </span>
-            <p className="text-white font-mono text-sm break-all font-semibold select-all selection:bg-babel-gold selection:text-black">
+            <p className="text-babel-parchment font-mono text-sm break-all font-semibold select-all selection:bg-babel-gold selection:text-black">
               {contractAddress}
             </p>
           </div>
@@ -113,15 +113,15 @@ export default function HowToBuy({ contractAddress }: HowToBuyProps) {
           {steps.map((step, idx) => (
             <div
               key={idx}
-              className="group bg-[#080808]/65 hover:bg-[#080808] border border-babel-border hover:border-babel-gold/40 rounded-sm p-6 transition-all duration-300 flex flex-col justify-between relative shadow-lg"
+              className="group bg-babel-bronze/40 hover:bg-babel-bronze/80 border border-babel-border hover:border-babel-gold/40 rounded-sm p-6 transition-all duration-300 flex flex-col justify-between relative shadow-lg"
             >
               {/* Step number on top and glowing */}
-              <div className="absolute top-6 right-6 font-display text-4xl font-extrabold text-[#111] group-hover:text-babel-gold/15 transition-colors duration-300">
+              <div className="absolute top-6 right-6 font-display text-4xl font-extrabold text-[#111111] group-hover:text-babel-orange/20 transition-colors duration-300">
                 {step.num}
               </div>
 
               <div>
-                <div className="p-3 bg-[#111111] border border-babel-border rounded-sm w-12 h-12 flex items-center justify-center mb-6 shadow-inner group-hover:border-babel-gold/30 transition-all duration-300">
+                <div className="p-3 bg-babel-dark/80 border border-babel-border rounded-sm w-12 h-12 flex items-center justify-center mb-6 shadow-inner group-hover:border-babel-orange/50 transition-all duration-300">
                   {step.icon}
                 </div>
 
@@ -134,7 +134,7 @@ export default function HowToBuy({ contractAddress }: HowToBuyProps) {
                   </h3>
                 </div>
 
-                <p className="text-[#a1a1aa] text-sm font-serif leading-relaxed mb-6">
+                <p className="text-babel-sandstone text-sm font-serif leading-relaxed mb-6">
                   {step.description}
                 </p>
               </div>
@@ -143,7 +143,7 @@ export default function HowToBuy({ contractAddress }: HowToBuyProps) {
                 href={step.actionUrl}
                 target="_blank"
                 referrerPolicy="no-referrer"
-                className="mt-auto flex items-center justify-between text-xs font-mono text-babel-gold group-hover:text-white transition-colors duration-200 border-t border-[#1a1a1a] pt-4"
+                className="mt-auto flex items-center justify-between text-xs font-mono text-babel-gold group-hover:text-white transition-colors duration-200 border-t border-babel-border pt-4"
               >
                 <span className="uppercase tracking-wider font-semibold">{step.actionText}</span>
                 <ArrowRight className="w-3.5 h-3.5 transform group-hover:translate-x-1 transition-transform" />

@@ -28,6 +28,13 @@ export default function Footer({ contractAddress, twitterUrl }: FooterProps) {
             "The danger is not that the machine becomes human. The danger is that humans become like the machine."
           </p>
 
+          <div className="pt-2 text-[11px] text-babel-gold">
+            <span className="text-[#52525b] block font-mono uppercase tracking-wider mb-0.5">COMMUNICATIONS:</span>
+            <a href="mailto:babelonsolana@gmail.com" className="hover:underline font-mono">
+              babelonsolana@gmail.com
+            </a>
+          </div>
+
           <p className="text-[10px] text-[#52525b]">
             &copy; {currentYear} $babel Protocol. Launched on Solana via pump.fun. Free from institutional control.
           </p>

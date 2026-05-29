@@ -17,7 +17,7 @@ export default function App() {
   const logoUrl = "https://pbs.twimg.com/media/HJdtlsBW8AI9Plo?format=jpg&name=small";
 
   return (
-    <div id="babel-root" className="min-h-screen bg-[#0b0907] text-[#eae5db] relative selection:bg-babel-gold/30 selection:text-babel-parchment">
+    <div id="babel-root" className="min-h-screen bg-babel-dark text-babel-parchment relative selection:bg-babel-gold/30 selection:text-white">
       {/* Golden dusty overlay / noise texture for classical feeling */}
       <div 
         className="fixed inset-0 pointer-events-none opacity-[0.03] mix-blend-color-dodge z-50 bg-repeat bg-center"

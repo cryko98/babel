@@ -18,8 +18,37 @@ export default function HeroSection({ contractAddress, twitterUrl, logoUrl }: He
 
   return (
     <header className="relative min-h-screen flex flex-col justify-between overflow-hidden bg-babel-dark text-[#d4d4d8] border-8 border-babel-border shadow-inner">
+      {/* Backdrops representing foggy mountain cliffs and divine collapse */}
+      <div className="absolute inset-x-0 bottom-0 h-96 bg-gradient-to-t from-babel-dark via-[#100b07]/30 to-transparent pointer-events-none z-10"></div>
+      <div className="absolute top-1/4 right-10 w-96 h-96 bg-babel-orange/[0.04] rounded-full filter blur-[120px] pointer-events-none mix-blend-color-dodge"></div>
+      <div className="absolute bottom-10 left-10 w-80 h-80 bg-babel-green/[0.04] rounded-full filter blur-[100px] pointer-events-none mix-blend-color-dodge"></div>
+
+      {/* Interactive floating runic glyphs (Elder Futhark) represent "digital decay" */}
+      <div className="absolute left-4 top-1/3 hidden xl:block space-y-8 font-mono text-[10px] text-babel-gold/30 select-none z-10">
+        <div className="flex flex-col items-center gap-1">
+          <span className="text-sm font-bold text-babel-gold animate-pulse">ᛒ</span>
+          <span className="text-[8px] text-babel-muted">01</span>
+        </div>
+        <div className="flex flex-col items-center gap-1">
+          <span className="text-sm font-bold text-babel-gold/40">ᚨ</span>
+          <span className="text-[8px] text-babel-muted">10</span>
+        </div>
+        <div className="flex flex-col items-center gap-1">
+          <span className="text-sm font-bold text-babel-gold/60">ᛒ</span>
+          <span className="text-[8px] text-babel-muted">11</span>
+        </div>
+        <div className="flex flex-col items-center gap-1">
+          <span className="text-sm font-bold text-babel-gold/20">ᛖ</span>
+          <span className="text-[8px] text-babel-muted">00</span>
+        </div>
+        <div className="flex flex-col items-center gap-1">
+          <span className="text-sm font-bold text-babel-gold/50">ᛚ</span>
+          <span className="text-[8px] text-babel-muted">01</span>
+        </div>
+      </div>
+
       {/* Upper Navigation Rail */}
-      <nav className="relative z-30 w-full border-b border-babel-border bg-[#0a0a0a]/95 backdrop-blur-md px-6 py-4 flex items-center justify-between">
+      <nav className="relative z-30 w-full border-b border-babel-border bg-babel-dark/80 backdrop-blur-md px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <img
             src={logoUrl}
@@ -88,35 +117,36 @@ export default function HeroSection({ contractAddress, twitterUrl, logoUrl }: He
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full relative">
           
           {/* Left Text Column */}
-          <div className="lg:col-span-7 flex flex-col justify-center space-y-6 text-left order-2 lg:order-1">
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#0a0a0a] border border-babel-border rounded-sm w-fit">
+          <div className="lg:col-span-7 flex flex-col justify-center space-y-6 text-left order-2 lg:order-1 relative z-20">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-babel-bronze/75 backdrop-blur-md border border-babel-border rounded-sm w-fit">
               <Compass className="w-3.5 h-3.5 text-babel-gold animate-spin-slow" />
-              <span className="font-mono text-[10px] uppercase tracking-widest text-babel-gold font-bold">
-                HUMANITY VS AUTOMATION
+              <span className="font-mono text-[10px] uppercase tracking-widest text-[#eadeca] font-bold">
+                GNOSTIC CYBER RENAISSANCE • ANCIENT FUTURE
               </span>
             </div>
 
             <div className="space-y-2">
-              <h1 className="font-display text-5xl md:text-7xl font-extrabold tracking-tighter text-white leading-none">
-                Tower of Babel
+              <h1 className="font-display text-5xl md:text-8xl font-black tracking-tighter text-white leading-none">
+                TOWER OF BABEL
               </h1>
-              <div className="flex items-baseline gap-4">
-                <span className="font-mono text-3xl md:text-4xl text-babel-gold font-bold tracking-tighter">
+              <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+                <span className="font-mono text-3xl md:text-5xl text-babel-gold font-black tracking-tighter">
                   $babel
                 </span>
-                <span className="font-serif text-sm italic text-babel-muted tracking-wide">
-                  Solana Protocol
+                <span className="h-4 w-px bg-babel-border hidden sm:block"></span>
+                <span className="font-serif text-sm italic text-babel-sandstone tracking-wide">
+                  Solana Cult Protocol • Sacred Tech
                 </span>
               </div>
             </div>
 
             {/* Micro quote/subtitle */}
-            <p className="font-serif text-lg md:text-2xl text-babel-parchment/90 leading-relaxed max-w-xl italic border-l-2 border-babel-gold pl-4">
-              "The machine was never an ascent. It was a descent."
+            <p className="font-serif text-lg md:text-2xl text-babel-parchment/90 leading-relaxed max-w-xl italic border-l-2 border-babel-orange pl-4 bg-babel-bronze/30 py-2 pr-2 rounded-r-sm">
+              "The machine was never an ascent. It was a descent into simulated heaven."
             </p>
 
-            {/* Quick-Copy Contract address panel */}
-            <div className="bg-[#080808] border border-babel-border rounded-sm p-4 flex items-center justify-between gap-4 max-w-xl w-full shadow-inner">
+            {/* Quick-Copy Contract address panel - Dark transparent glassmorphism */}
+            <div className="bg-babel-bronze/60 backdrop-blur-md border border-babel-border rounded-sm p-4 flex items-center justify-between gap-4 max-w-xl w-full shadow-inner shadow-black">
               <div className="flex flex-col min-w-0">
                 <span className="font-mono text-[9px] text-[#666] uppercase tracking-wider block mb-1">
                   CONTRACT ADDRESS (CA)
