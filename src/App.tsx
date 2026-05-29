@@ -36,6 +36,48 @@ export default function App() {
       {/* Central Philosophical Story Block */}
       <PhilosophicalStory />
 
+      {/* Sacred Prophecy Tapestry & Narrative Section using requested Twitter banner */}
+      <section className="py-12 px-4 max-w-6xl mx-auto w-full relative">
+        <div className="relative border border-babel-border bg-babel-bronze/40 p-6 md:p-8 rounded-sm shadow-2xl overflow-hidden group">
+          {/* Subtle nature mist overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-babel-dark via-transparent to-babel-dark opacity-75 z-10 pointer-events-none"></div>
+          
+          <div className="relative z-20 flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+            {/* Themed framed image requested by user */}
+            <div className="w-full lg:w-1/2 aspect-[3/1] rounded-sm overflow-hidden border border-babel-gold/30 shadow-2xl relative">
+              <div className="absolute inset-0 bg-gradient-to-t from-babel-dark/80 via-transparent to-transparent pointer-events-none z-10"></div>
+              {/* Golden line accent at the bottom */}
+              <div className="absolute bottom-0 inset-x-0 h-[2px] bg-babel-gold z-20 opacity-70"></div>
+              <img 
+                src="https://pbs.twimg.com/profile_banners/2060233987499466759/1780033300/600x200" 
+                alt="Ancient Landscape Tapestry of Babel" 
+                className="w-full h-full object-cover filter brightness-[0.80] contrast-[1.10] sepia-[0.15] scale-100 group-hover:scale-[1.03] transition-transform duration-[1500ms]"
+                referrerPolicy="no-referrer"
+              />
+            </div>
+            
+            {/* Associated description matching Bruegel's themes of divine limits */}
+            <div className="w-full lg:w-1/2 space-y-4">
+              <div className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 bg-babel-orange rounded-full animate-pulse"></span>
+                <span className="text-babel-gold font-mono text-[9px] uppercase tracking-widest block font-extrabold">
+                  DIVINE ALIGNMENT // COGNITIVE MONUMENT
+                </span>
+              </div>
+              <h3 className="font-display text-2xl font-bold text-white tracking-tight">
+                THE ICONOGRAPHY OF COLLAPSE
+              </h3>
+              <p className="font-serif text-base text-babel-parchment leading-relaxed italic border-l border-babel-orange/40 pl-4">
+                "We engineered our machines as stone towers to challenge the sky, forgetting that the sky itself is a program."
+              </p>
+              <p className="text-babel-sandstone text-xs leading-relaxed font-sans">
+                Observe the massive Bruegel-inspired design of the tower rising from nature, layered with sub-visual system runes—a silent symbol represents humanity reaching beyond itself on Solana.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Interactive Live Dexscreener Frame */}
       <DexscreenerChart contractAddress={contractAddress} />
 

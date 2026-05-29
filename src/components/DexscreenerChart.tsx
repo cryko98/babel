@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { AreaChart, TrendingUp, ExternalLink, RefreshCw, BarChart2 } from "lucide-react";
+import { TrendingUp, ExternalLink, RefreshCw } from "lucide-react";
 
 interface DexscreenerChartProps {
   contractAddress: string;
@@ -14,7 +14,7 @@ export default function DexscreenerChart({ contractAddress }: DexscreenerChartPr
     setIsLoading(true);
   };
 
-  // Dexscreener embed URL for Solana pair or token
+  // Dexscreener iframe embed URL with optimized dark themes
   const embedUrl = `https://dexscreener.com/solana/${contractAddress}?embed=1&theme=dark&trades=0&info=0`;
 
   return (
@@ -36,8 +36,8 @@ export default function DexscreenerChart({ contractAddress }: DexscreenerChartPr
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 pb-4 border-b border-babel-border">
           <div>
             <div className="flex items-center gap-2 text-babel-gold font-mono text-xs uppercase tracking-widest mb-2 font-bold">
-              <TrendingUp className="w-4 h-4" />
-              <span>DESCENT METRICS // VOLUMETRIC METERS</span>
+              <TrendingUp className="w-4 h-4 text-babel-orange" />
+              <span>DESCENT METRICS // LIQUID MIRROR</span>
             </div>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-white tracking-tighter">
               MARKET MIRROR
@@ -48,11 +48,12 @@ export default function DexscreenerChart({ contractAddress }: DexscreenerChartPr
             <button
               onClick={handleRefresh}
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-sm bg-babel-dark hover:bg-babel-bronze border border-babel-border text-babel-gold hover:text-white transition duration-200 cursor-pointer font-bold uppercase tracking-wider"
-              title="Reload Chart"
+              title="Reload Chart Feed"
             >
               <RefreshCw className="w-3.5 h-3.5" />
               <span>RELOAD FEED</span>
             </button>
+
             <a
               href={`https://dexscreener.com/solana/${contractAddress}`}
               target="_blank"
@@ -74,7 +75,7 @@ export default function DexscreenerChart({ contractAddress }: DexscreenerChartPr
                 <div className="absolute inset-0 rounded-full border-2 border-t-babel-gold animate-spin"></div>
               </div>
               <p className="font-mono text-[10px] uppercase tracking-widest text-babel-gold animate-pulse font-bold">
-                Initiating Machine Feedback...
+                Connecting to Liquid Mirror...
               </p>
             </div>
           )}
@@ -83,9 +84,10 @@ export default function DexscreenerChart({ contractAddress }: DexscreenerChartPr
             key={key}
             src={embedUrl}
             onLoad={() => setIsLoading(false)}
-            className="w-full h-full border-0 absolute top-0 left-0"
+            className="w-full h-full border-0 absolute top-0 left-0 bg-transparent"
             allow="clipboard-write"
             allowFullScreen
+            referrerPolicy="no-referrer"
           />
         </div>
 
@@ -114,3 +116,4 @@ export default function DexscreenerChart({ contractAddress }: DexscreenerChartPr
     </section>
   );
 }
+
