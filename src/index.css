@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=JetBrains+Mono:wght@300;400;500;600&family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", serif;
+  --font-display: "Cinzel", serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --font-sans: "Inter", sans-serif;
+  
+  --color-babel-dark: #050505;
+  --color-babel-parchment: #d4d4d8;
+  --color-babel-clay: #0a0a0a;
+  --color-babel-gold: #c2a468;
+  --color-babel-orange: #a8884c;
+  --color-babel-muted: #71717a;
+  --color-babel-border: #2a2a2a;
+}
+
+/* Custom styles and smooth animations */
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  background-color: #050505;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+}
+
+/* Custom scrollbar styling for a crisp high-contrast dark look */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+::-webkit-scrollbar-thumb {
+  background: #1a1a1a;
+  border: 1px solid #c2a468;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c2a468;
+}
